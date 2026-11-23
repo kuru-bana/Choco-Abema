@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: choco-abema
+    runtime: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: node server.js
+    autoDeploy: true

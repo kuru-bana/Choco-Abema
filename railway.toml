@@ -1,0 +1,13 @@
+# Railway の設定。Dockerfile でビルドする
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "node server.js"
+healthcheckPath = "/healthz"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
+
+# 環境変数(WORKERS など)は、Railway の Variables 画面で設定する
